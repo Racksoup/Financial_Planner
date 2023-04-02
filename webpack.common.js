@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Tackle',
+      title: 'Anthony Rack',
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',
@@ -34,7 +34,7 @@ module.exports = {
     rules: [
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: { loader: 'babel-loader' } },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
       },
       {

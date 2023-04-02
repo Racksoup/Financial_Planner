@@ -1,0 +1,144 @@
+.Navbar {
+  position: fixed;
+  width: 100vw;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+
+  @media (max-width: 1500px) {
+    height: 2.3rem;
+  }
+
+  @media (max-width: 750px) {
+    height: 2.6rem;
+  }
+
+  .Content {
+    width: 90rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+
+    .Left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .Contact {
+        margin-left: 2.7rem;
+        display: flex;
+
+        @media (max-width: 750px) {
+          display: none;
+        }
+
+        p {
+          font-size: 0.9rem;
+          margin-left: 1rem;
+        }
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .Link {
+        height: 100%;
+      }
+
+      h4 {
+        font-size: 2rem;
+        padding: 0 1rem;
+
+        @media (max-width: 1500px) {
+          height: 100%;
+        }
+      }
+
+      .Title {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .Right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .Item {
+        border-left: solid 0.1rem rgba(255, 255, 255, 0.8);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        padding: 0 1rem;
+        cursor: pointer;
+
+        @media (max-width: 1500px) {
+          font-size: 1.3rem;
+        }
+
+        &-End {
+          border-right: solid 0.1rem rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    .Hamburger {
+      width: 7rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 750px) {
+        width: 5rem;
+      }
+
+      .Icon {
+        height: 2rem;
+        width: 2rem;
+
+        path {
+          color: white;
+        }
+
+        @media (max-width: 750px) {
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+
+      .DropDown {
+        position: fixed;
+        top: 2.3rem;
+        right: 0;
+        width: 14rem;
+        background-color: black;
+
+        p {
+          width: 100%;
+          padding: 0.4rem;
+          font-size: 2.5rem;
+
+          &:hover {
+            background-color: grey;
+          }
+        }
+      }
+    }
+  }
+}
