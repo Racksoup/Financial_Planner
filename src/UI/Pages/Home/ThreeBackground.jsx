@@ -58,7 +58,7 @@ function ThreeBackground() {
       points.push(point);
     }
 
-    // Create 15 sqheres
+    // Create sqheres
     const spheres = [];
     for (let i = 0; i < vertices.length; i += 3) {
       const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32);
