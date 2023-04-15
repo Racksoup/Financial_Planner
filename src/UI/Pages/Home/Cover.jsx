@@ -42,6 +42,17 @@ const Cover = ({ linkToRef }) => {
             </p>
           </div>
         </div>
+
+        <div className='Content'>
+          <h1>Financial Advisor</h1>
+          <div className='Content-Body'>
+            <h2>Secure your financial future with expert guidance</h2>
+            <div className='CallToAction'>
+              <button>Get In Touch</button>
+              <p>613-XXX-XXXX</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

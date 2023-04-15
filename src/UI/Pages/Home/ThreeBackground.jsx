@@ -23,11 +23,11 @@ function ThreeBackground() {
       0.1,
       1000
     );
-    camera.position.z = 2;
-    camera.position.y = -6;
-    camera.position.x = 3.4;
-    camera.rotation.y = 0.2;
-    camera.rotation.x = 0.7;
+    camera.position.z = 2.7;
+    camera.position.y = -7.15;
+    camera.position.x = 4;
+    camera.rotation.y = 0.14;
+    camera.rotation.x = 0.55;
     cameraRef.current = camera;
 
     // Initialize renderer
@@ -40,7 +40,7 @@ function ThreeBackground() {
     containerRef.current.appendChild(renderer.domElement);
 
     // Create square mesh with points
-    const geometry = new THREE.PlaneGeometry(14, 14, 22, 22);
+    const geometry = new THREE.PlaneGeometry(18, 18, 26, 26);
     const material = new THREE.MeshStandardMaterial({
       color: '#fff',
       wireframe: true,
@@ -61,8 +61,8 @@ function ThreeBackground() {
     // Create sqheres
     const spheres = [];
     for (let i = 0; i < vertices.length; i += 3) {
-      const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32);
-      const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#252525' });
+      const sphereGeometry = new THREE.SphereGeometry(0.11, 32, 32);
+      const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#005304' });
       const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
       scene.add(sphere);
       spheres.push(sphere);
@@ -106,7 +106,7 @@ function ThreeBackground() {
             const diagonalOffset = topLeftDistance * 1;
             const offsetTime = (time / 1000) * 2;
             const waveOffset = Math.sin(diagonalOffset - offsetTime);
-            point.z = waveOffset * 0.2;
+            point.z = waveOffset * 0.15;
 
             // Apply rotation to sphere position
             const sphere = spheresRef.current[i];
