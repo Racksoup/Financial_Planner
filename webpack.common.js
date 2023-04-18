@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Anthony Rack',
+      title: 'Zues Moose',
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',

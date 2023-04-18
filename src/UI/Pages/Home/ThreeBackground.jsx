@@ -24,14 +24,14 @@ function ThreeBackground() {
       1000
     );
     camera.position.z = 2.7;
-    camera.position.y = -7.15;
-    camera.position.x = 4;
+    camera.position.y = -6.9;
+    camera.position.x = 4.8;
     camera.rotation.y = 0.14;
     camera.rotation.x = 0.55;
     cameraRef.current = camera;
 
     // Initialize renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ powerPreference: 'high-performance' });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor('#2b2b2b');
     rendererRef.current = renderer;
@@ -40,7 +40,7 @@ function ThreeBackground() {
     containerRef.current.appendChild(renderer.domElement);
 
     // Create square mesh with points
-    const geometry = new THREE.PlaneGeometry(18, 18, 26, 26);
+    const geometry = new THREE.PlaneGeometry(21, 21, 28, 28);
     const material = new THREE.MeshStandardMaterial({
       color: '#fff',
       wireframe: true,
@@ -62,7 +62,7 @@ function ThreeBackground() {
     const spheres = [];
     for (let i = 0; i < vertices.length; i += 3) {
       const sphereGeometry = new THREE.SphereGeometry(0.11, 32, 32);
-      const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#005304' });
+      const sphereMaterial = new THREE.MeshBasicMaterial({ color: '#003c64' });
       const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
       scene.add(sphere);
       spheres.push(sphere);
@@ -81,6 +81,11 @@ function ThreeBackground() {
     pointsRef.current = points;
     spheresRef.current = spheres;
 
+    // Set fps
+    let clock = new THREE.Clock();
+    let delta = 0;
+    let interval = 1 / 45;
+
     // Animation loop function
     function animate(time) {
       if (rendererRef.current && sceneRef.current && cameraRef.current) {
@@ -89,40 +94,46 @@ function ThreeBackground() {
 
         // Update object position based on time and rotation
         if (previousTimeRef.current !== undefined) {
-          const delta = time - previousTimeRef.current;
-          for (let i = 0; i < pointsRef.current.length; i++) {
-            const point = pointsRef.current[i];
+          // Apply fps limit
+          delta += clock.getDelta();
+          if (delta > interval) {
+            delta = delta % interval;
 
-            // Apply rotation to point
-            point.applyEuler(rotation);
+            // sd
+            for (let i = 0; i < pointsRef.current.length; i++) {
+              const point = pointsRef.current[i];
 
-            // Calculate z position based on diagonal wave
-            const distance = Math.sqrt(point.x ** 2 + point.y ** 2);
-            const offset = distance * 0.3 - time * 0.005;
-            const topLeftDistance = Math.sqrt(
-              (geometry.parameters.width / 2 - point.x) ** 2 +
-                (geometry.parameters.height / 2 - point.y) ** 2
-            );
-            const diagonalOffset = topLeftDistance * 1;
-            const offsetTime = (time / 1000) * 2;
-            const waveOffset = Math.sin(diagonalOffset - offsetTime);
-            point.z = waveOffset * 0.15;
+              // Apply rotation to point
+              point.applyEuler(rotation);
 
-            // Apply rotation to sphere position
-            const sphere = spheresRef.current[i];
-            const spherePosition = new THREE.Vector3(point.x, point.y, point.z);
-            spherePosition.applyEuler(rotation);
-            sphere.position.set(spherePosition.x, spherePosition.y, spherePosition.z);
+              // Calculate z position based on diagonal wave
+              const distance = Math.sqrt(point.x ** 2 + point.y ** 2);
+              const offset = distance * 0.3 - time * 0.005;
+              const topLeftDistance = Math.sqrt(
+                (geometry.parameters.width / 2 - point.x) ** 2 +
+                  (geometry.parameters.height / 2 - point.y) ** 2
+              );
+              const diagonalOffset = topLeftDistance * 1;
+              const offsetTime = (time / 1000) * 2;
+              const waveOffset = Math.sin(diagonalOffset - offsetTime);
+              point.z = waveOffset * 0.15;
 
-            // Update point position on plane
-            geometry.attributes.position.setXYZ(i, point.x, point.y, point.z);
+              // Apply rotation to sphere position
+              const sphere = spheresRef.current[i];
+              const spherePosition = new THREE.Vector3(point.x, point.y, point.z);
+              spherePosition.applyEuler(rotation);
+              sphere.position.set(spherePosition.x, spherePosition.y, spherePosition.z);
+
+              // Update point position on plane
+              geometry.attributes.position.setXYZ(i, point.x, point.y, point.z);
+            }
+            geometry.attributes.position.needsUpdate = true;
           }
-          geometry.attributes.position.needsUpdate = true;
-        }
-        previousTimeRef.current = time;
+          previousTimeRef.current = time;
 
-        // Render scene
-        rendererRef.current.render(sceneRef.current, cameraRef.current);
+          // Render scene
+          rendererRef.current.render(sceneRef.current, cameraRef.current);
+        }
       }
 
       // Call next animation frame

@@ -2,8 +2,78 @@
   margin-top: 30rem;
   width: 100%;
   height: 40rem;
-  background-color: green;
+  background-color: white;
+  display: flex;
+  justify-content: center;
 
   .Container {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      margin-top: 3rem;
+      font-size: 2.2rem;
+      text-decoration: underline;
+    }
+
+    .Grid {
+      margin-top: 2rem;
+      width: 100%;
+      height: 30rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+
+      .Item {
+        width: 16rem;
+        height: 9rem;
+        background-color: rgb(241, 241, 241);
+        box-shadow: 3px 3px 3px 1px rgb(145, 145, 145);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        h6 {
+          margin-top: 0.9rem;
+          width: 80%;
+          font-size: 1.4rem;
+          text-align: center;
+          border-bottom: solid 2px black;
+          line-height: 1.4rem;
+          height: 1.4rem;
+        }
+
+        .Points {
+          margin-top: 0.5rem;
+          width: 80%;
+          height: 5.2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+
+          .PointLine {
+            margin-top: 0.4rem;
+            display: flex;
+            align-items: center;
+
+            .Point {
+              margin: 0 0.3rem 0 0.9rem;
+              width: 0.5rem;
+              height: 0.5rem;
+              border-radius: 0.5rem;
+              background-color: black;
+            }
+
+            p {
+            }
+          }
+        }
+      }
+    }
   }
 }
