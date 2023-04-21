@@ -1,8 +1,88 @@
+@import '../../../App.scss';
+
 .Contact {
   width: 100%;
-  height: 40rem;
-  background-color: rgb(255, 255, 255);
+  height: auto;
+  background-color: $BGColor;
+  display: flex;
+  justify-content: center;
 
   .Container {
+    margin-bottom: 3rem;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-1 {
+      margin-top: 3rem;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+
+      .Info {
+        width: 24rem;
+        height: 3.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: end;
+
+        .Text {
+          font-size: 1.2rem;
+        }
+      }
+
+      .Form {
+        padding: 1rem;
+        width: 24rem;
+        background-color: rgb(241, 241, 241);
+        box-shadow: 3px 3px 3px 1px rgb(145, 145, 145);
+        display: flex;
+        flex-direction: column;
+
+        .Line {
+          margin-bottom: 0.5rem;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-size: 0.9rem;
+          }
+
+          input {
+            width: 17.2rem;
+            padding: 0 0.3rem;
+            font-size: 0.9rem;
+            border-radius: 0.2rem;
+          }
+        }
+
+        .BoxLine {
+          margin-bottom: 0.5rem;
+          display: flex;
+          flex-direction: column;
+
+          p {
+            font-size: 0.9rem;
+          }
+
+          textarea {
+            margin-top: 0.2rem;
+            margin-bottom: 0.6rem;
+            width: 100%;
+            height: 8rem;
+            border-radius: 0.2rem;
+            padding: 0.3rem;
+            font-size: 0.9rem;
+            resize: none;
+          }
+        }
+
+        .Button-2 {
+          align-self: end;
+        }
+      }
+    }
   }
 }

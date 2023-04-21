@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
+import '../../../App.scss';
 import Cover from './Cover.jsx';
+import CoverOverlay from './CoverOverlay.jsx';
 import Advice from './Advice.jsx';
 import Profile from './Profile.jsx';
 import Contact from './Contact.jsx';
@@ -31,11 +32,12 @@ const Home = () => {
   };
 
   return (
-    <div className='Home'>
+    <div className='App'>
       <ThreeBackground />
       <Cover linkToRef={linkToRef} />
+      <CoverOverlay scrollPos={scrollPos} />
       <Advice />
-      <Profile />
+      <Profile linkToRef={linkToRef} />
       <Contact />
       {scrollPos > 1049 && window.innerWidth >= 750 && <Navbar linkToRef={linkToRef} />}
       {window.innerWidth < 750 && <Navbar linkToRef={linkToRef} />}

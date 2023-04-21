@@ -1,8 +1,120 @@
+@import '../../../App.scss';
+
 .Profile {
   width: 100%;
-  height: 40rem;
-  background-color: rgb(255, 255, 255);
+  height: auto;
+  background-color: $BGColor;
+  display: flex;
+  justify-content: center;
 
   .Container {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-1 {
+      margin-top: 4rem;
+      width: 100%;
+      height: 35rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .Divider {
+      width: 2px;
+      height: 100%;
+      background-color: black;
+    }
+
+    &-2 {
+      width: 43%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+
+      .Profile-img {
+        width: 100%;
+        height: 100%;
+        border: solid 1px black;
+        object-fit: cover;
+        object-position: 0% 100%;
+      }
+
+      h6 {
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-size: 1rem;
+      }
+
+      .Quote {
+        margin-top: 2.6rem;
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      button {
+        margin-top: 2.1rem;
+        align-self: end;
+        font-weight: 400;
+        width: 7.6rem;
+        height: 2.2rem;
+      }
+    }
+  }
+}
+
+.Testimonial {
+  margin-top: 2.1rem;
+  width: 100%;
+  height: 5.6rem;
+  background-color: rgb(212, 214, 181);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+
+  &-img {
+    width: 4rem;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Inner {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .Top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        text-decoration: underline;
+      }
+    }
+
+    .Bottom {
+      margin-top: 0.4rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      overflow: hidden;
+    }
   }
 }

@@ -9,11 +9,11 @@ const Cover = ({ linkToRef }) => {
         <div className='Header'>
           <div className='Left'>
             <div className='NameBox'>
-              <h2>Zues Moose</h2>
+              <h2>ZUES MOOSE</h2>
             </div>
             <img src={ZBIcon} alt='Toronto Dominion' />
             <div className='Contact'>
-              <p>613-869-2343</p>
+              <p>613-869-2111</p>
               <p>Tranquilgorge@outlook.com</p>
             </div>
           </div>
@@ -24,33 +24,40 @@ const Cover = ({ linkToRef }) => {
                 linkToRef('advice');
               }}
             >
-              advice
+              Advice
             </p>
             <p
               onClick={() => {
                 linkToRef('profile');
               }}
             >
-              profile
+              Profile
             </p>
             <p
               onClick={() => {
                 linkToRef('contact');
               }}
             >
-              contact
+              Contact
             </p>
           </div>
         </div>
 
         <div className='Content'>
-          <h1>Financial Advisor</h1>
-          <div className='Content-Body'>
+          <div className='Content-Left'>
+            <h1>FINANCIAL ADVISOR</h1>
             <h2>Secure your financial future with expert guidance</h2>
-            <div className='CallToAction'>
-              <button>Get In Touch</button>
-              <p>613-XXX-XXXX</p>
-            </div>
+          </div>
+          <div className='CallToAction'>
+            <button
+              className='Button-1'
+              onClick={() => {
+                linkToRef('contact');
+              }}
+            >
+              GET IN TOUCH
+            </button>
+            <p>613-843-1132</p>
           </div>
         </div>
       </div>
