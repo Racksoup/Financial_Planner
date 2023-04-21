@@ -33,7 +33,7 @@ function ThreeBackground() {
     // Initialize renderer
     const renderer = new THREE.WebGLRenderer({ powerPreference: 'high-performance' });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor('#2b2b2b');
+    renderer.setClearColor('#141414');
     rendererRef.current = renderer;
 
     // Add renderer to the container
