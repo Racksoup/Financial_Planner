@@ -150,6 +150,12 @@ function ThreeBackground() {
     };
   }, []);
 
+  const handleWindowSizeChange = () => {
+    rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+  };
+
+  window.addEventListener('resize', handleWindowSizeChange, false);
+
   // useEffect(() => {
   //   // Update camera position based on scroll position
   //   function handleScroll() {
