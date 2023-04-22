@@ -8,42 +8,46 @@ const Cover = ({ linkToRef }) => {
   return (
     <div className='Cover' id='cover'>
       <div className='Container'>
-        <div className='Header'>
-          <div className='Left'>
-            <div className='NameBox'>
-              <h2>ZUES MOOSE</h2>
+        {window.innerWidth > 1000 && (
+          <div className='Header'>
+            <div className='Left'>
+              <div className='NameBox'>
+                <h2>ZUES MOOSE</h2>
+              </div>
+              <img src={ZBIcon} alt='Toronto Dominion' />
+              {window.innerWidth > 600 && (
+                <div className='Contact'>
+                  <p>613-869-2111</p>
+                  <p>Tranquilgorge@outlook.com</p>
+                </div>
+              )}
             </div>
-            <img src={ZBIcon} alt='Toronto Dominion' />
-            <div className='Contact'>
-              <p>613-869-2111</p>
-              <p>Tranquilgorge@outlook.com</p>
-            </div>
-          </div>
 
-          <div className='HeaderNav'>
-            <p
-              onClick={() => {
-                linkToRef('advice');
-              }}
-            >
-              Advice
-            </p>
-            <p
-              onClick={() => {
-                linkToRef('profile');
-              }}
-            >
-              Profile
-            </p>
-            <p
-              onClick={() => {
-                linkToRef('contact');
-              }}
-            >
-              Contact
-            </p>
+            <div className='HeaderNav'>
+              <p
+                onClick={() => {
+                  linkToRef('advice');
+                }}
+              >
+                Advice
+              </p>
+              <p
+                onClick={() => {
+                  linkToRef('profile');
+                }}
+              >
+                Profile
+              </p>
+              <p
+                onClick={() => {
+                  linkToRef('contact');
+                }}
+              >
+                Contact
+              </p>
+            </div>
           </div>
-        </div>
+        )}
 
         <div className='Content'>
           <div className='Content-Left'>

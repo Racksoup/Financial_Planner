@@ -12,6 +12,10 @@
     height: 340px;
   }
 
+  @media (max-width: $BPMedium) {
+    height: auto;
+  }
+
   .Container {
     height: 100%;
     width: 1440px;
@@ -21,6 +25,11 @@
 
     @media (max-width: $BPLarge) {
       width: $BPMedium;
+    }
+
+    @media (max-width: $BPMedium) {
+      width: 100%;
+      max-width: $BPSmall;
     }
 
     .Header {
@@ -46,7 +55,7 @@
           justify-content: center;
 
           h2 {
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: black;
             font-weight: 600;
           }
@@ -78,7 +87,7 @@
         justify-content: space-between;
 
         p {
-          font-size: 1rem;
+          font-size: 0.9rem;
           color: black;
           cursor: pointer;
 

@@ -11,7 +11,7 @@ const Navbar = ({ linkToRef }) => {
       <div className='Content'>
         <div className='Left'>
           <button className='Title'>
-            <h4 onClick={() => linkToRef('cover')}>Financial Planner</h4>
+            <h4 onClick={() => linkToRef('cover')}>ZUES MOOSE</h4>
           </button>
 
           <div className='ContactInfo'>
