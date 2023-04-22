@@ -38,7 +38,7 @@ body {
   width: 0.3rem;
 
   &-thumb {
-    background: rgb(139, 167, 185);
+    background: rgb(60, 72, 80);
     border-radius: 0.1rem;
     height: 20px;
   }
@@ -65,7 +65,7 @@ button {
   border: solid 1px black;
   background-color: rgb(0, 233, 97);
   color: black;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -85,7 +85,7 @@ h3 {
 }
 
 // Variables
-$BGColor: rgb(192, 196, 199);
+$BGColor: rgb(206, 210, 214);
 
 // Fonts
 @font-face {

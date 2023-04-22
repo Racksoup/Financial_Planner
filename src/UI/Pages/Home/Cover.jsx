@@ -1,6 +1,8 @@
 import React from 'react';
 import './Cover.scss';
 import ZBIcon from '../../../Assets/Images/ZBIcon.png';
+import EmailIcon from '../../../Assets/Images/EmailIcon.png';
+import PhoneIcon from '../../../Assets/Images/PhoneIcon.png';
 
 const Cover = ({ linkToRef }) => {
   return (
@@ -49,6 +51,16 @@ const Cover = ({ linkToRef }) => {
             <h2>Secure your financial future with expert guidance</h2>
           </div>
           <div className='CallToAction'>
+            <div className='CallToAction-Info'>
+              <div className='Line'>
+                <img src={EmailIcon} alt='Email' />
+                <p>Moves.Like@Jager.com</p>
+              </div>
+              <div className='Line'>
+                <img src={PhoneIcon} alt='Phone' />
+                <p>1-663-389-0909</p>
+              </div>
+            </div>
             <button
               className='Button-1'
               onClick={() => {
@@ -57,7 +69,6 @@ const Cover = ({ linkToRef }) => {
             >
               GET IN TOUCH
             </button>
-            <p>613-843-1132</p>
           </div>
         </div>
       </div>

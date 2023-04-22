@@ -103,25 +103,45 @@
         justify-content: space-between;
 
         h2 {
-          font-size: 1.7rem;
-          line-height: 2rem;
+          font-size: 1.4rem;
+          margin-top: -0.6rem;
           font-family: 'Mukta-Light';
           color: rgb(50, 50, 50);
         }
       }
 
       .CallToAction {
-        margin-top: 3rem;
-        margin-right: 4rem;
+        height: 100%;
+        margin-right: 4.2rem;
         align-self: start;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
 
-        p {
-          font-size: 0.8rem;
-          margin-top: 0.2rem;
-          color: rgb(71, 71, 71);
+        &-Info {
+          margin-top: 0.4rem;
+          display: flex;
+          flex-direction: column;
+
+          .Line {
+            display: flex;
+            margin-bottom: 0.4rem;
+
+            img {
+              margin-right: 1.2rem;
+              width: 1.3rem;
+              max-height: 1.1rem;
+              object-fit: contain;
+            }
+
+            p {
+              font-size: 0.8rem;
+              margin-top: 0.2rem;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              color: rgb(50, 50, 50);
+            }
+          }
         }
       }
     }
