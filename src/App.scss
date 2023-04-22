@@ -80,8 +80,14 @@ button {
 
 h3 {
   margin-top: 7.6rem;
-  font-size: 2.2rem;
-  text-decoration: underline;
+  padding: 0 2rem;
+  border-bottom: 2px black solid;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  // text-decoration: underline;
 }
 
 // Variables
