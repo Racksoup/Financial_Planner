@@ -7,10 +7,6 @@ const Contact = () => {
       <div className='Container'>
         <h3>Contact</h3>
         <div className='Container-1'>
-          <div className='Info'>
-            <p className='Text'>ZZBakes@Bakers.com</p>
-            <p className='Text'>1-613-843-1132</p>
-          </div>
           <div className='Form'>
             <div className='Line'>
               <p>Name:</p>
@@ -25,6 +21,10 @@ const Contact = () => {
               <textarea type='text' />
             </div>
             <button className='Button-2'>SEND MESSAGE</button>
+          </div>
+          <div className='Info'>
+            <p className='Text'>ZZBakes@Bakers.com</p>
+            <p className='Text'>1-613-843-1132</p>
           </div>
         </div>
       </div>

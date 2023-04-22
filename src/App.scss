@@ -35,10 +35,10 @@ body {
 // Scrollbar
 ::-webkit-scrollbar {
   background: transparent;
-  width: 0.6rem;
+  width: 0.3rem;
 
   &-thumb {
-    background: rgb(44, 53, 59);
+    background: rgb(139, 167, 185);
     border-radius: 0.1rem;
     height: 20px;
   }
@@ -85,7 +85,7 @@ h3 {
 }
 
 // Variables
-$BGColor: rgb(230, 230, 230);
+$BGColor: rgb(192, 196, 199);
 
 // Fonts
 @font-face {
