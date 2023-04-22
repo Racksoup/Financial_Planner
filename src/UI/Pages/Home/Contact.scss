@@ -18,15 +18,29 @@
       width: $BPMedium;
     }
 
+    @media (max-width: $BPMedium) {
+      width: 100%;
+      max-width: $BPSmall;
+    }
+
     &-1 {
       margin-top: 5rem;
       width: 100%;
       display: flex;
 
+      @media (max-width: $BPMedium) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .Info {
         margin: 1rem 0 0 3rem;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: $BPMedium) {
+          margin: 0;
+        }
 
         .Line {
           display: flex;
@@ -55,6 +69,10 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: $BPMedium) {
+          width: 95%;
+        }
+
         .Line {
           width: 100%;
           margin-bottom: 1rem;
@@ -62,11 +80,20 @@
           justify-content: space-between;
           align-items: start;
 
+          @media (max-width: $BPMedium) {
+            flex-direction: column;
+          }
+
           .Col {
             width: 45%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @media (max-width: $BPMedium) {
+              margin-top: 1.5rem;
+              width: 100%;
+            }
 
             p {
               font-size: 1rem;
@@ -87,6 +114,10 @@
           margin-bottom: 0.5rem;
           display: flex;
           flex-direction: column;
+
+          @media (max-width: $BPMedium) {
+            margin-top: 0.5rem;
+          }
 
           p {
             font-size: 1rem;
