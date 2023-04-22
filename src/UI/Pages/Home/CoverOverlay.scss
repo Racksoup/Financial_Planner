@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: center;
 
+  &-Large {
+    height: 55rem;
+  }
+
   p {
     font-size: 4rem;
     width: 90rem;
