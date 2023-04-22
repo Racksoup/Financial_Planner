@@ -12,8 +12,8 @@ const Profile = ({ linkToRef }) => {
           <div className='Container-2'>
             <img className='Profile-img' src={BusinessMan} alt='BusinessMan' />
           </div>
-          <div className='Divider'></div>
-          <div className='Container-2'>
+          {window.innerWidth > 1000 && <div className='Divider'></div>}
+          <div className={`Container-2 ${window.innerWidth < 1001 && 'Container-2-Small'}`}>
             <h6 style={{ marginTop: '0' }}>Awards</h6>
             <p>CNBC Financial Advisor Council Certificate of Honors</p>
             <p>RBC Regional Alumni Financial Planner Award</p>
