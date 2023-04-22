@@ -1,3 +1,9 @@
+// Variables
+$BGColor: rgb(206, 210, 214);
+$BPLarge: 1440px;
+$BPMedium: 1000px;
+$BPSmall: 600px;
+
 // Window Object CSS
 html {
   width: 100%;
@@ -87,14 +93,11 @@ h3 {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  // text-decoration: underline;
-}
 
-// Variables
-$BGColor: rgb(206, 210, 214);
-$BPLarge: 1440px;
-$BPMedium: 1000px;
-$BPSmall: 600px;
+  @media (max-width: $BPMedium) {
+    font-size: 1.5rem;
+  }
+}
 
 // Fonts
 @font-face {

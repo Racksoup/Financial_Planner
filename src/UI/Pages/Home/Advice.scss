@@ -13,6 +13,11 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $BPMedium) {
+      width: 100%;
+      max-width: $BPSmall;
+    }
+
     .Grid {
       margin-top: 3rem;
       width: 100%;
@@ -20,6 +25,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       place-items: center;
+
+      @media (max-width: $BPMedium) {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
 
       .Item {
         width: 16rem;
@@ -30,6 +40,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: start;
+
+        @media (max-width: $BPMedium) {
+          margin: 3rem 0 2rem 0;
+        }
 
         h6 {
           margin-top: 1.2rem;
