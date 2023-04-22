@@ -8,7 +8,7 @@ const CoverOverlay = ({ scrollPos }) => {
       <div className='Box'>
         <p
           className={`${
-            window.innerWidth > 1000 ? scrollPos > 1 && 'Active' : scrollPos > 100 && 'Active'
+            window.innerWidth > 1000 ? scrollPos > 1 && 'Active' : scrollPos > 20 && 'Active'
           }`}
         >
           Invest in Your Future Today.
