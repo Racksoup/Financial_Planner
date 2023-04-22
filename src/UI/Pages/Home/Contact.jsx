@@ -1,5 +1,7 @@
 import React from 'react';
 import './Contact.scss';
+import EmailIcon from '../../../Assets/Images/EmailIcon.png';
+import PhoneIcon from '../../../Assets/Images/PhoneIcon.png';
 
 const Contact = () => {
   return (
@@ -9,22 +11,30 @@ const Contact = () => {
         <div className='Container-1'>
           <div className='Form'>
             <div className='Line'>
-              <p>Name:</p>
-              <input type='text' />
-            </div>
-            <div className='Line'>
-              <p>Email:</p>
-              <input type='text' />
+              <div className='Col'>
+                <p>Your Name</p>
+                <input type='text' />
+              </div>
+              <div className='Col'>
+                <p>Your Email</p>
+                <input type='text' />
+              </div>
             </div>
             <div className='BoxLine'>
-              <p>Message:</p>
+              <p>Your Message</p>
               <textarea type='text' />
             </div>
-            <button className='Button-2'>SEND MESSAGE</button>
+            <button className='Button-1'>SEND MESSAGE</button>
           </div>
           <div className='Info'>
-            <p className='Text'>ZZBakes@Bakers.com</p>
-            <p className='Text'>1-613-843-1132</p>
+            <div className='Line'>
+              <img src={EmailIcon} alt='Email' />
+              <p>Moves.Like@Jager.com</p>
+            </div>
+            <div className='Line'>
+              <img src={PhoneIcon} alt='Phone' />
+              <p>1-663-389-0909</p>
+            </div>
           </div>
         </div>
       </div>

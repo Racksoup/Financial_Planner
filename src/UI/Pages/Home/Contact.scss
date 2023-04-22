@@ -15,45 +15,67 @@
     align-items: center;
 
     &-1 {
-      margin-top: 3rem;
-      width: 80%;
+      margin-top: 5rem;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
 
       .Info {
-        height: 3.6rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: end;
-
-        .Text {
-          font-size: 1.2rem;
-        }
-      }
-
-      .Form {
-        padding: 1rem;
-        width: 24rem;
-        background-color: rgb(241, 241, 241);
-        box-shadow: 3px 3px 3px 1px rgb(145, 145, 145);
+        margin: 1rem 0 0 3rem;
         display: flex;
         flex-direction: column;
 
         .Line {
-          margin-bottom: 0.5rem;
           display: flex;
-          justify-content: space-between;
+          margin-bottom: 0.7rem;
+          align-items: center;
+
+          img {
+            margin-top: 0.2rem;
+            margin-right: 0.9rem;
+            width: 1.3rem;
+            max-height: 1.1rem;
+            object-fit: contain;
+          }
 
           p {
             font-size: 0.9rem;
+            margin-top: 0.2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(50, 50, 50);
           }
+        }
+      }
 
-          input {
-            width: 17.2rem;
-            padding: 0 0.3rem;
-            font-size: 0.9rem;
-            border-radius: 0.2rem;
+      .Form {
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+
+        .Line {
+          width: 100%;
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+
+          .Col {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+              font-size: 1rem;
+            }
+
+            input {
+              margin-top: 0.2rem;
+              width: 100%;
+              height: 2.7rem;
+              padding: 0 0.5rem;
+              font-size: 1.2rem;
+              border-radius: 0.2rem;
+            }
           }
         }
 
@@ -63,12 +85,11 @@
           flex-direction: column;
 
           p {
-            font-size: 0.9rem;
+            font-size: 1rem;
           }
 
           textarea {
             margin-top: 0.2rem;
-            margin-bottom: 0.6rem;
             width: 100%;
             height: 8rem;
             border-radius: 0.2rem;
@@ -78,7 +99,10 @@
           }
         }
 
-        .Button-2 {
+        .Button-1 {
+          margin-top: 1.8rem;
+          width: 10rem;
+          height: 2.7rem;
           align-self: end;
         }
       }
