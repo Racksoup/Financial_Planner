@@ -18,16 +18,18 @@
 
   .Box {
     overflow: hidden;
-    position: absolute;
   }
 
   p {
+    position: absolute;
     font-size: 4rem;
     text-align: center;
     color: white;
     right: -100%;
     opacity: 0;
     background-color: red;
+    max-width: 100%;
+    width: 100%;
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
@@ -46,7 +48,7 @@
   }
 
   .Active {
-    right: 50%;
+    right: 0%;
     opacity: 1;
     transition: 0.7s;
   }
