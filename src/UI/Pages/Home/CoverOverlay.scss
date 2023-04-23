@@ -22,6 +22,7 @@
     color: white;
     margin-left: 120%;
     opacity: 0;
+    display: none;
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
@@ -40,6 +41,7 @@
   }
 
   .Active {
+    display: block;
     margin-left: 0rem;
     opacity: 1;
     transition: 0.7s;
