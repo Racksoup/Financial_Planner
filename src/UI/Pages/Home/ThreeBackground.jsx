@@ -39,20 +39,18 @@ function ThreeBackground() {
     // Add renderer to the container
     containerRef.current.appendChild(renderer.domElement);
 
-    // Create square mesh with points
+    // set geometry size based on screen size
     const screenWidth = Math.min(window.innerWidth, window.screen.width);
-    let xSize = 14;
-    if (screenWidth > 1000) {
-      xSize = 17;
-    }
-    if (screenWidth > 1440) {
-      xSize = 21;
+    let xSize = 21;
+    if (screenWidth > 1200) {
+      xSize = 25;
     }
     if (screenWidth > 1920) {
-      xSize = 26;
+      xSize = 30;
     }
 
-    const geometry = new THREE.PlaneGeometry(xSize, xSize, 28, 28);
+    // Create square mesh with points
+    const geometry = new THREE.PlaneGeometry(xSize, xSize, 32, 32);
     const material = new THREE.MeshStandardMaterial({
       color: '#fff',
       wireframe: true,
@@ -167,6 +165,29 @@ function ThreeBackground() {
       Math.min(window.screen.width, window.innerWidth),
       window.innerHeight
     );
+
+    const width = Math.min(window.screen.width, window.innerWidth);
+    const height = window.innerHeight;
+
+    rendererRef.current.setSize(width, height);
+    cameraRef.current.aspect = width / height;
+    cameraRef.current.updateProjectionMatrix();
+
+    // const scaleX =
+    //   Math.floor((Math.min(window.screen.width, window.innerWidth) / 1920) * 100) / 100;
+    // // const scaleY = Math.floor((window.screen.height / 1080) * 100) / 100;
+    // sceneRef.current.scale.set(scaleX, scaleX, scaleX);
+    // sceneRef.current.traverse((object) => {
+    //   if (object.isMesh) {
+    //     object.scale.set(scaleX, scaleX, scaleX);
+    //   }
+    // });
+
+    // cameraRef.current.position.z = 2.7 * scaleX;
+    // cameraRef.current.position.y = -6.9 * scaleX;
+    // cameraRef.current.position.x = 4.8 * scaleX;
+    // cameraRef.current.zoom = 1 - scale + 1;
+    cameraRef.current.updateProjectionMatrix();
   };
 
   window.addEventListener('resize', handleWindowSizeChange, false);
