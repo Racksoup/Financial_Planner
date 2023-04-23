@@ -28,22 +28,21 @@
     right: -100%;
     opacity: 0;
     background-color: red;
-    max-width: 100%;
     width: 100%;
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
-      width: 40rem;
+      max-width: 40rem;
     }
 
     @media (max-width: 720px) {
       font-size: 2rem;
-      width: 30rem;
+      max-width: 30rem;
     }
 
     @media (max-width: 485px) {
       font-size: 1.2rem;
-      width: 20rem;
+      max-width: 20rem;
     }
   }
 
