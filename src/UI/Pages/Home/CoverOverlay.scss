@@ -16,9 +16,12 @@
     height: 25rem;
   }
 
+  .Box {
+    overflow: hidden;
+  }
+
   p {
     position: absolute;
-    width: 100%;
     font-size: 4rem;
     text-align: center;
     color: white;
@@ -28,7 +31,6 @@
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
-      margin-left: 0;
       width: 40rem;
     }
 
@@ -44,7 +46,7 @@
   }
 
   .Active {
-    right: 0%;
+    right: 50%;
     opacity: 1;
     transition: 0.7s;
   }
