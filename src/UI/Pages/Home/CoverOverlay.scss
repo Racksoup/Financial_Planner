@@ -25,14 +25,17 @@
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
+      width: 60rem;
     }
 
     @media (max-width: 720px) {
       font-size: 2rem;
+      width: 40rem;
     }
 
     @media (max-width: 485px) {
       font-size: 1.2rem;
+      width: 30rem;
     }
   }
 
