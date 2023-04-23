@@ -14,7 +14,7 @@ const CoverOverlay = ({ scrollPos }) => {
           className={`${
             Math.min(window.screen.width, window.innerWidth) > 1000
               ? scrollPos > 1 && 'Active'
-              : scrollPos > 20 && 'Active'
+              : scrollPos > 1 && 'Active'
           }`}
         >
           Invest in Your Future Today.
