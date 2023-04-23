@@ -39,8 +39,8 @@ const Home = () => {
       <Advice />
       <Profile linkToRef={linkToRef} />
       <Contact />
-      {scrollPos > 1049 && window.innerWidth >= 1000 && <Navbar linkToRef={linkToRef} />}
-      {window.innerWidth < 1000 && <Navbar linkToRef={linkToRef} />}
+      {scrollPos > 1049 && window.screen.width >= 1000 && <Navbar linkToRef={linkToRef} />}
+      {window.screen.width < 1000 && <Navbar linkToRef={linkToRef} />}
     </div>
   );
 };

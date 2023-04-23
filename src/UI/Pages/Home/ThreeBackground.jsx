@@ -19,7 +19,7 @@ function ThreeBackground() {
     // Initialize camera
     const camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      window.screen.width / window.innerHeight,
       0.1,
       1000
     );
@@ -32,7 +32,7 @@ function ThreeBackground() {
 
     // Initialize renderer
     const renderer = new THREE.WebGLRenderer({ powerPreference: 'high-performance' });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.screen.width, window.innerHeight);
     renderer.setClearColor('#141414');
     rendererRef.current = renderer;
 
@@ -151,7 +151,7 @@ function ThreeBackground() {
   }, []);
 
   const handleWindowSizeChange = () => {
-    rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+    rendererRef.current.setSize(window.screen.width, window.innerHeight);
   };
 
   window.addEventListener('resize', handleWindowSizeChange, false);
