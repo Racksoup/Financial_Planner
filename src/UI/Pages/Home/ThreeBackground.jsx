@@ -40,7 +40,19 @@ function ThreeBackground() {
     containerRef.current.appendChild(renderer.domElement);
 
     // Create square mesh with points
-    const geometry = new THREE.PlaneGeometry(21, 21, 28, 28);
+    const screenWidth = Math.min(window.innerWidth, window.screen.width);
+    let xSize = 14;
+    if (screenWidth > 1000) {
+      xSize = 17;
+    }
+    if (screenWidth > 1440) {
+      xSize = 21;
+    }
+    if (screenWidth > 1920) {
+      xSize = 26;
+    }
+
+    const geometry = new THREE.PlaneGeometry(xSize, xSize, 28, 28);
     const material = new THREE.MeshStandardMaterial({
       color: '#fff',
       wireframe: true,
