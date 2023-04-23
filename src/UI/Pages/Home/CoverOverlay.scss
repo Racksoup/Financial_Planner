@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &-Large {
     height: 55rem;
@@ -17,30 +17,37 @@
   }
 
   p {
+    position: absolute;
+    width: 100%;
     font-size: 4rem;
     text-align: center;
     color: white;
-    margin-left: 60%;
+    right: -100%;
     opacity: 0;
     display: hidden;
     width: 50rem;
+    background-color: red;
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
+      margin-left: 0;
+      width: 40rem;
     }
 
     @media (max-width: 720px) {
       font-size: 2rem;
+      width: 30rem;
     }
 
     @media (max-width: 485px) {
       font-size: 1.2rem;
+      width: 20rem;
     }
   }
 
   .Active {
     display: block;
-    margin-left: 0rem;
+    right: 0%;
     opacity: 1;
     transition: 0.7s;
   }
