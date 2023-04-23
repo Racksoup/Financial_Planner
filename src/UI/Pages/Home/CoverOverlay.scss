@@ -24,8 +24,6 @@
     color: white;
     right: -100%;
     opacity: 0;
-    display: hidden;
-    width: 50rem;
     background-color: red;
 
     @media (max-width: $BPMedium) {
@@ -46,7 +44,6 @@
   }
 
   .Active {
-    display: block;
     right: 0%;
     opacity: 1;
     transition: 0.7s;
