@@ -103,7 +103,6 @@
     .Content {
       margin-top: 3.5rem;
       width: 100%;
-      // background-color: grey;
       display: flex;
       justify-content: space-between;
 
@@ -160,10 +159,6 @@
 
         @media (max-width: $BPLarge) {
           margin-right: 0;
-
-          .Button-1 {
-            margin-top: 0.6rem;
-          }
         }
 
         @media (max-width: $BPMedium) {
@@ -178,10 +173,12 @@
           flex-direction: column;
 
           .Line {
+            margin-top: 0.2rem;
             display: flex;
             margin-bottom: 0.4rem;
 
             img {
+              margin-top: 0.1rem;
               margin-right: 0.9rem;
               width: 1.3rem;
               max-height: 1.1rem;
@@ -190,10 +187,15 @@
 
             p {
               font-size: 0.8rem;
-              margin-top: 0.2rem;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
               color: rgb(50, 50, 50);
             }
+          }
+        }
+
+        .Button-1 {
+          @media (max-width: $BPLarge) {
+            margin-top: 0.6rem;
           }
         }
       }

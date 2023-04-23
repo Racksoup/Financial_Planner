@@ -67,16 +67,16 @@ button {
 }
 
 .Button-1 {
-  width: 9.2rem;
-  height: 2.8rem;
-  border-radius: 0.2rem;
-  border: solid 1px black;
-  background-color: rgb(0, 233, 97);
+  width: 8.8rem;
+  height: 2.6rem;
+  background-color: rgb(221, 255, 0);
+  box-shadow: 0 0 8px 1px black;
   color: black;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Source_Sans_Pro-Bold';
 }
 
+// background-color: rgb(0, 233, 97);
 .Button-2 {
   padding: 0.4rem 0.7rem;
   border-radius: 0.2rem;
@@ -129,4 +129,16 @@ h3 {
 @font-face {
   font-family: 'Mukta-SemiBold';
   src: url('~/src/Assets/Fonts/Mukta/Mukta-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Source_Sans_Pro-Regular';
+  src: url('~/src/Assets/Fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: 'Source_Sans_Pro-SemiBold';
+  src: url('~/src/Assets/Fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Source_Sans_Pro-Bold';
+  src: url('~/src/Assets/Fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
 }
