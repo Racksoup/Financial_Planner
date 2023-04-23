@@ -17,26 +17,23 @@
 
   p {
     font-size: 4rem;
-    width: 90rem;
     text-align: center;
     color: white;
-    margin-left: 120%;
+    margin-left: 60%;
     opacity: 0;
-    display: none;
+    display: hidden;
+    width: 50rem;
 
     @media (max-width: $BPMedium) {
       font-size: 3rem;
-      width: 60rem;
     }
 
     @media (max-width: 720px) {
       font-size: 2rem;
-      width: 40rem;
     }
 
     @media (max-width: 485px) {
       font-size: 1.2rem;
-      width: 30rem;
     }
   }
 
