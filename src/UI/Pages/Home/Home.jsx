@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className='App'>
-      <ThreeBackground />
+      {/* <ThreeBackground /> */}
       <Cover linkToRef={linkToRef} />
       <CoverOverlay scrollPos={scrollPos} />
       <Advice />
