@@ -32,7 +32,7 @@ function ThreeBackground() {
 
     // Initialize renderer
     const renderer = new THREE.WebGLRenderer({ powerPreference: 'high-performance' });
-    renderer.setSize(Math.min(window.screen.width, window.innerWidth), window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor('#141414');
     rendererRef.current = renderer;
 
