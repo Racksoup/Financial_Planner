@@ -9,6 +9,7 @@ const Cover = ({ linkToRef }) => {
     <div className='Cover' id='cover'>
       <div className='Container'>
         <p>{window.innerWidth}</p>
+        <p>{window.screen.width}</p>
         {window.innerWidth > 1000 && (
           <div className='Header'>
             <div className='Left'>
