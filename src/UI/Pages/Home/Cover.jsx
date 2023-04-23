@@ -8,16 +8,14 @@ const Cover = ({ linkToRef }) => {
   return (
     <div className='Cover' id='cover'>
       <div className='Container'>
-        <p>{window.innerWidth}</p>
-        <p>{window.screen.width}</p>
-        {window.innerWidth > 1000 && (
+        {Math.min(window.screen.width, window.innerWidth) > 1000 && (
           <div className='Header'>
             <div className='Left'>
               <div className='NameBox'>
                 <h2>ZUES MOOSE</h2>
               </div>
               <img src={ZBIcon} alt='Toronto Dominion' />
-              {window.innerWidth > 600 && (
+              {Math.min(window.screen.width, window.innerWidth) > 600 && (
                 <div className='Contact'>
                   <p>613-869-2111</p>
                   <p>Tranquilgorge@outlook.com</p>
