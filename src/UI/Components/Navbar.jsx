@@ -20,7 +20,7 @@ const Navbar = ({ linkToRef }) => {
           </div>
         </div>
 
-        {window.screen.width >= 1060 ? (
+        {Math.min(window.screen.width, window.innerWidth) >= 1060 ? (
           <div className='Right'>
             <p className='Item' onClick={() => linkToRef('advice')}>
               Advice

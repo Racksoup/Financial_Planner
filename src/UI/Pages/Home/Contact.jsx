@@ -9,7 +9,7 @@ const Contact = () => {
       <div className='Container'>
         <h3>Contact</h3>
         <div className='Container-1'>
-          {window.screen.width < 1001 && <Info />}
+          {Math.min(window.screen.width, window.innerWidth) < 1001 && <Info />}
           <div className='Form'>
             <div className='Line'>
               <div className='Col'>
@@ -27,7 +27,7 @@ const Contact = () => {
             </div>
             <button className='Button-1'>SEND MESSAGE</button>
           </div>
-          {window.screen.width > 1000 && <Info />}
+          {Math.min(window.screen.width, window.innerWidth) > 1000 && <Info />}
         </div>
       </div>
     </div>
